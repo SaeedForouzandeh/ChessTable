@@ -1,0 +1,271 @@
+﻿/* تعریف فونت IRANSansX */
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('fonts/IRANSansX.ttf') format('truetype');
+    font-weight: normal; /* مشخص کردن اینکه این نسخه فونت معمولی است */
+}
+
+/* تعریف فونت IRANSansX-Bold */
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('/fonts/IRANSansX-Bold.ttf') format('truetype');
+    font-weight: bold; /* مشخص کردن اینکه این نسخه فونت بولد است */
+}
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'IRANSansX', IRANSansX, tahoma;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+@supports (font-variation-settings: normal) {
+    body {
+        font-family: 'IRANSansX', tahoma;
+    }
+}
+
+/* تنظیم متن داخل دکمه و فرم */
+form {
+    margin-top: 15px;
+}
+.containerPage {
+    width: 300px; /* عرض فرم */
+    background: #1e1e1e;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: auto;
+}
+
+/* کانتینر اصلی که جدول در آن قرار می‌گیرد */
+.container {
+    background-color: #1E1E1E; /* رنگ پس‌زمینه کانتینر */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* سایه برای برجسته کردن */
+    width: auto; /* عرض به اندازه محتوای داخل */
+    max-width: 100%; /* حداکثر عرض 100% */
+    text-align: center; /* وسط‌چین کردن متن‌ها */
+    box-sizing: border-box; /* این ویژگی باعث می‌شود padding به صورت درون‌مرزی محاسبه شود */
+    margin: 0 auto; /* مرکز کردن کادر در صفحه */
+    overflow-x: auto; /* برای اسکرول افقی در صورت نیاز */
+
+}
+
+/* کانتینر جدول */
+.chess-board {
+    display: inline-block; /* باعث می‌شود کانتینر جدول فقط فضای جدول را اشغال کند */
+    border: 2px solid #BB86FC; /* حاشیه دور جدول */
+    border-radius: 15px; /* گوشه‌های گرد کانتینر جدول */
+    padding: 10px;
+    background-color: #1E1E1E;
+    overflow-x: auto; /* اسکرول افقی در صورت لزوم */
+    box-sizing: border-box;
+    text-align: center; /* برای وسط‌چین کردن جدول */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* سایه مشکی نرم */
+}
+
+
+/* تیتر صفحه */
+h1 {
+    font-size: 18px;
+    color: #d6aefb;
+    margin-bottom: 20px;
+}
+
+
+/* عناصر داخلی فرم */
+.form-group {
+    margin-bottom: 10%; /* فاصله بین تکست‌باکس و دکمه */
+}
+
+label {
+    margin-bottom: 5px; /* فاصله از تکست‌باکس */
+    display: block; /* نمایش به‌صورت بلوکی */
+}
+/* استایل برای تکست‌باکس‌ها */
+input[type="number"] {
+    width: 70%; 
+    padding: 10px 12px; 
+    font-size: 16px;
+    margin-bottom: 30%;
+    border: 2px solid #8f44fd;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+    input[type="number"]:focus {
+        border-color: #d6aefb;
+        box-shadow: 0px 0px 8px rgba(214, 174, 251, 0.5);
+    }
+input[type="text"] {
+    width: 70%;
+    font-family: "IRANSansX", Arial, sans-serif;
+    padding: 10px 12px;
+    border-radius: 10px; /* گوشه‌های گرد */
+    margin-bottom: 10%;
+    border: 2px solid #BB86FC;
+    outline: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #1E1E1E;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+}
+
+    input[type="text"]:focus {
+        border-color: #9E7BDF;
+        box-shadow: 0 4px 10px rgba(187, 134, 252, 0.4);
+    }
+    
+
+/* دکمه‌ها */
+button {
+    width: 95%;
+    padding: 12px 15px;
+    background-color: #8f44fd;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'IRANSansX', IRANSansX;
+    transition: all 0.3s ease;
+}
+
+    button.btn {
+        font-family: 'IRANSansX', IRANSansX, tahoma;
+        font-weight: normal;
+        background-color: #BB86FC;
+        color: #121212;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        margin-bottom: 10%;
+    }
+
+
+    button.btn:hover {
+        background-color: #3700B3; /* رنگ بنفش تیره‌تر */
+        color: #FFFFFF;
+    }
+
+/* استایل برای دکمه‌ها */
+button, input[type="submit"] {
+    font-family: 'IRANSansX', IRANSansX, tahoma;
+    font-weight: normal;
+    background-color: #BB86FC; /* رنگ پس‌زمینه دکمه */
+    color: #FFFFFF; /* رنگ متن دکمه */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(187, 134, 252, 0.4); /* سایه نرم دکمه */
+}
+
+    button:hover, input[type="submit"]:hover {
+        background-color: #9E7BDF; /* تغییر رنگ پس‌زمینه در هاور */
+        box-shadow: 0 6px 15px rgba(187, 134, 252, 0.6); /* تغییر سایه در هاور */
+    }
+
+
+
+
+/* جدول شطرنجی */
+table {
+    table-layout: fixed; /* اندازه خانه‌ها ثابت می‌ماند */
+    border-collapse: collapse; /* برای حذف فضای اضافی بین سلول‌ها */
+    margin: 0 auto; /* مرکز کردن جدول */
+}
+
+    table.chess-board {
+        border-collapse: collapse; /* حذف فاصله بین خطوط */
+        margin: 20px auto; /* وسط‌چین کردن جدول */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* سایه نرم دور جدول */
+        border-radius: 15px; /* کرو کردن گوشه‌های جدول */
+        overflow: hidden; /* جلوگیری از بیرون زدن سلول‌ها */
+        transition: transform 0.3s ease; /* تغییرات نرم در حالت هاور */
+    }
+
+    /* تنظیم رنگ خانه‌های شطرنجی */
+    table tr:nth-child(even) td:nth-child(odd),
+    table tr:nth-child(odd) td:nth-child(even) {
+        background-color: #BB86FC; /* رنگ متناوب */
+    }
+
+    table tr:nth-child(even) td:nth-child(even),
+    table tr:nth-child(odd) td:nth-child(odd) {
+        background-color: #2C2C2C; /* رنگ متناوب دیگر */
+    }
+
+    table td {
+        width: 50px; /* عرض ثابت برای هر سلول */
+        height: 50px; /* ارتفاع ثابت برای هر سلول */
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        font-weight: bold;
+        background-clip: padding-box;
+        box-sizing: border-box;
+        border-radius: 12px; /* گردتر شدن گوشه‌های خانه‌ها */
+    }
+        /* وقتی که موس روی خانه‌ها می‌رود */
+        table td:hover {
+            transform: scale(1.1); /* بزرگتر کردن خانه وقتی موس روی آن است */
+            transition: transform 0.2s ease; /* افکت نرم برای بزرگ شدن */
+            background-color: #BB86FC; /* تغییر رنگ پس‌زمینه خانه */
+        }
+
+
+
+
+/* پیام خطا */
+.error-container {
+    font-family: 'IRANSansX', IRANSansX, tahoma;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #1E1E1E;
+    color: #CF6679;
+    border: 2px solid #CF6679;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+    /* تیتر در صفحه خطا */
+    .error-container h2 {
+        font-family: 'IRANSansX', IRANSansX, tahoma;
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    /* متن توضیحی در صفحه خطا */
+    .error-container p {
+        font-family: 'IRANSansX', IRANSansX, tahoma;
+        font-weight: normal;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    /* دکمه بازگشت */
+    .error-container .btn {
+        font-family: 'IRANSansX', IRANSansX, tahoma;
+        font-weight: normal;
+        display: inline-block;
+        margin-top: 10px;
+    }
